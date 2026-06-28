@@ -14,7 +14,7 @@ void setup() {
 }
 
 void loop() {
-  if (digitalRead(2) == LOW) { // Press the button = 5 led will light 1 by 1
+  if (digitalRead(2) == LOW) { // Press the button = 5 LED will light 1 by 1
     digitalWrite(9, HIGH);
     delay(1000);
     digitalWrite(10, HIGH);
@@ -28,7 +28,7 @@ void loop() {
 
     delay(2000); // Wait for light to turn off
 
-    // All light went down = GO!
+    // All lights went down = GO!
     digitalWrite(9, LOW);
     digitalWrite(10, LOW);
     digitalWrite(11, LOW);
