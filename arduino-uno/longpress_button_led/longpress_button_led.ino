@@ -1,5 +1,5 @@
-unsigned long startTime = 0;
-unsigned long currentTime = 0;
+unsigned long startTime = 0; // RECORDS THE TIME WHEN BUTTON IS PRESSED
+unsigned long currentTime = 0; // CONTINUEOSLY COUNT THE DURATION OF PRESS ON THE BUTTON
 bool isPressed = false; // SWITCH OFF
 
 void setup() {
@@ -11,11 +11,11 @@ void setup() {
 
 void loop() {
   if(digitalRead(2) == LOW && isPressed == false) {
-    startTime = millis();
+    startTime = millis(); // START WEH BUTTON IS PRESSED
     isPressed = true; // PRESSED BUTTON
   }
 
-  currentTime = millis(); // Track milliseconds 
+  currentTime = millis(); // COUNTS THE SECONDS 
 
   // HOLD THE BUTTON = TURN ON
   if (isPressed == true && (currentTime - startTime >= 1)) {
